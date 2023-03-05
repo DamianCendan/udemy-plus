@@ -1,27 +1,27 @@
-import { registerBlockType } from '@wordpress/blocks'
+import { registerBlockType } from "@wordpress/blocks";
 import { 
   useBlockProps, PanelColorSettings, InspectorControls 
-} from '@wordpress/block-editor'
-import { __ } from "@wordpress/i18n"
-import block from './block.json'
-import icons from '../../icons'
-import './main.css'
+} from "@wordpress/block-editor";
+import { __ } from "@wordpress/i18n";
+import block from "./block.json";
+import icons from "../../icons";
+import "./main.css";
 
 registerBlockType(block.name, {
   icon: icons.primary,
-  edit( attributes, setAttributes ) {
+  edit({ attributes, setAttributes }) {
     const { bgColor, textColor } = attributes
     const blockProps = useBlockProps({
       style: {
         'background-color': bgColor,
         color:textColor
       }
-    })
+    });
     return (
       <>
         <InspectorControls>
           <PanelColorSettings 
-            title={__('Colors', 'udemy-plus')}
+            title={__("Colors", 'udemy-plus')}
             colorSettings={[
               {
                 label: __('Background Color', 'udemy-plus'),
@@ -41,12 +41,15 @@ registerBlockType(block.name, {
           <form>
             <input type="text" placeholder="Search" />
             <div className="btn-wrapper">
-              <button type="submit">Search</button>
+              <button type="submit" style= {{                     
+                'background-color': bgColor,
+                color: textColor                     
+              }}>Search</button>
             </div>
           </form>
         </div>
       </>
-    )
+    );
   }
 })
 

@@ -259,7 +259,11 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_4__.name, {
   icon: _icons__WEBPACK_IMPORTED_MODULE_5__["default"].primary,
-  edit(attributes, setAttributes) {
+  edit(_ref) {
+    let {
+      attributes,
+      setAttributes
+    } = _ref;
     const {
       bgColor,
       textColor
@@ -271,7 +275,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
-      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Colors', 'udemy-plus'),
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Colors", 'udemy-plus'),
       colorSettings: [{
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Background Color', 'udemy-plus'),
         value: bgColor,
@@ -291,7 +295,11 @@ __webpack_require__.r(__webpack_exports__);
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "btn-wrapper"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-      type: "submit"
+      type: "submit",
+      style: {
+        'background-color': bgColor,
+        color: textColor
+      }
     }, "Search")))));
   }
 });
