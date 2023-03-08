@@ -5,7 +5,10 @@ function up_register_blocks() {
     [ 'name' => 'fancy-header' ],
     [ 'name' => 'search-form', 'options' => [
       'render_callback' => 'up_search_form_render_cd'
-    ] ]
+    ] ],
+    [ 'name' => 'page-header', 'options' => [
+      'render_callback' => 'up_page_header_render_cd'
+    ]]
   ];
 
   foreach($blocks as $block) {
