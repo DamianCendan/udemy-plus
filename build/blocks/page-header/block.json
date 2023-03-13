@@ -9,7 +9,8 @@
   "editorScript": "file:./index.js",
   "attributes": {
     "content": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "showCategory": {
       "type": "boolean",
